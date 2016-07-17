@@ -1,15 +1,15 @@
 module ProjectStatus
-  class GitRevision
+  class GitInfo
     class << self
       def generate
         {
-          :commit_hash        => commit,
-          :commit_hash_short  => commit_short,
-          :commit_message     => message,
-          :authored_date      => date,
-          :authored_timestamp => timestamp,
-          :commit_tag         => tag,
-          :repo_last_tag      => last_tag
+          commit_hash:        commit,
+          commit_hash_short:  commit_short,
+          commit_message:     message,
+          authored_date:      date,
+          authored_timestamp: timestamp,
+          commit_tag:         tag,
+          repo_last_tag:      last_tag
         }
       end
 
