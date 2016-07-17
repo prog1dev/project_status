@@ -5,7 +5,7 @@ class StatusController < ::ApplicationController
   def index
     render json: {
         git_info:     ProjectStatus::GitInfo.generate,
-        # project_info: ProjectStatus::ProjectInfo.generate,
+        project_info: ProjectStatus::ProjectInfo.generate,
         started_at:   Time.now
     }
   end
