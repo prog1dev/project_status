@@ -14,6 +14,10 @@ module ProjectStatus
     protected
 
     def check_access_key
+      access_key = Config::ADDITIONAL_INFO[:access_key]
+      if access_key && access_key != params[:access_key]
+        render json: { error: "Access denied" }
+      end
     end
   end
 end
